@@ -2,8 +2,14 @@ p{
     color: black;
 }
 h1{
-    color: skyblue;
+    color: rgb(6, 67, 91);
+    text-shadow: rgb(72, 210, 231)1px 0 10px;
 }
 html{
-    background-color: rgb(165, 241, 240);
+    background-color: rgb(196, 238, 237);
+}
+h2{
+    color:black;
+    font-family: cursive;
+    background: linear-gradient(to right, rgb(146, 238, 236), #335cd6);
 }
