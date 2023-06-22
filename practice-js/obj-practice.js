@@ -6,7 +6,7 @@ let campus = {
 	lon: 35.624869704425,
 	lat: 139.28201056633
 };
-console.log(campas.address);
+console.log(campus.address);
 
 let gakka = [
 	{name: "機械システム工学科", ename: "Department of Mechanical Systems Engineering"},
