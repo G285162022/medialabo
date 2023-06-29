@@ -200,4 +200,8 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
+console.log(data.results.shop[0].access);
+console.log(data.results.shop[0].address);
+console.log(data.results.shop[0].name);
+console.log(data.results.shop[0].catch);
 
