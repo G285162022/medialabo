@@ -12,9 +12,9 @@ let yoso = 4;
 
 
     let i = document.querySelector('input[name="yoso"]');
-    //console.log(yoso);
+    
     let b1 = document.querySelector('button#suuzi');
-    b1.addEventListener('click',hantei);
+    b1.addEventListener('click',hantei); //hanteiに結果を送る。
     
 
 
