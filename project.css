@@ -8,3 +8,9 @@ body {
 h2 {
     color:darkblue;
 }
+input {
+    text-align: center;
+}
+button {
+    text-align: center;
+}
