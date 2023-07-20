@@ -218,9 +218,9 @@ console.log("営業時間:" + data.results.shop[1].open);
 console.log("最寄駅:" + data.results.shop[1].station_name);
 console.log("サブジャンル:" + data.results.shop[1].sub_genre.name)
 */
+let kaisu = 0;
 let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
-
 
 // 通信を開始する処理
 function sendRequest() {
@@ -289,11 +289,51 @@ function showResult(resp) {
         data = JSON.parse(data);
     }
 
-    // data をコンソールに出力
-    console.log(data);
-
-    // data.x を出力
-    console.log(data.x);
+    // コンソールに出力
+    if(kaisu !== 0){
+      let pyou = document.querySelectorAll('p');
+      let h3 = document.querySelectorAll('h3');
+      for(let h3r of h3){
+        h3r.remove();
+      }
+      for (let prem of pyou){
+        prem.remove();
+      }
+    }
+    for(let i=0;i<data.results.shop.length;i=i+1){
+      let divi = document.querySelector('div#info');  
+      let h3 = document.createElement('h3')
+      h3.textContent = ('店舗名:' + data.results.shop[i].name);
+      divi.insertAdjacentElement('beforeend', h3);
+      let pyo = document.createElement('p');
+      pyo.textContent = ('キャッチコピー:' + data.results.shop[i].catch);
+      divi.insertAdjacentElement('beforeend', pyo);
+      pyo = document.createElement('p');
+      pyo.textContent = ('アクセス情報:' + data.results.shop[i].access);
+      divi.insertAdjacentElement('beforeend', pyo);
+      pyo = document.createElement('p');
+      pyo.textContent = ('最寄駅:' + data.results.shop[i].station_name);
+      divi.insertAdjacentElement('beforeend', pyo);
+      pyo = document.createElement('p');
+      pyo.textContent = ('住所:' + data.results.shop[i].address);
+      divi.insertAdjacentElement('beforeend', pyo);
+      pyo = document.createElement('p');
+      pyo.textContent = ('予算:' + data.results.shop[i].budget.name);
+      divi.insertAdjacentElement('beforeend', pyo);
+      pyo = document.createElement('p');
+      pyo.textContent = ('営業日時:' + data.results.shop[i].open);
+      divi.insertAdjacentElement('beforeend', pyo);
+    }
+    let divi = document.querySelector('div#research');  
+    pyo = document.createElement('p');
+      pyo.textContent = ('検索結果は以上です。再検索も可能です。');
+      divi.insertAdjacentElement('beforeend', pyo);
+      pyo = document.createElement('p');
+      pyo.textContent = ('条件を変えれば、再検索が可能です。');
+      divi.insertAdjacentElement('beforeend', pyo);
+      let butt = document.querySelector('button#sendRequest');
+      butt.textContent = '再検索する!'
+    kaisu = kaisu+1;
 }
 
 // 通信エラーが発生した時の処理
