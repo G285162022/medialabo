@@ -233,41 +233,46 @@ function sendRequest() {
     console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
     console.log('  textContent='+o.textContent);
     let genre = '';
-    if(idx === 1){
-      genre = 'G001';
-    }else if(idx === 2){
-      genre = 'G002';
-    }else if(idx === 3){
-      genre = 'G003';
-    }else if(idx === 4){
-      genre = 'G004';
-    }else if(idx === 5){
-      genre = 'G005';
-    }else if(idx === 6){
-      genre = 'G006';
-    }else if(idx === 7){
-      genre = 'G007';
-    }else if(idx === 8){
-      genre = 'G008';
-    }else if(idx === 9){
-      genre = 'G009';
-    }else if(idx === 10){
-      genre = 'G010';
-    }else if (idx === 11){
-      genre = 'G011';
-    }else if (idx === 12){
-      genre = 'G012';
-    }else if (idx === 13){
-      genre = 'G013';
-    }else if (idx === 14){
-      genre = 'G014';
-    }else if (idx === 15){
-      genre = 'G015';
-    }else if (idx === 16){
-      genre = 'G016';
-    }else if(idx === 17){
-      genre = 'G017';
+    if(idx<9){
+      genre = 'G00'+(idx+1);
+    }else{
+      genre = 'G0'+(idx+1);
     }
+    // if(idx === 1){
+    //   genre = 'G001';
+    // }else if(idx === 2){
+    //   genre = 'G002';
+    // }else if(idx === 3){
+    //   genre = 'G003';
+    // }else if(idx === 4){
+    //   genre = 'G004';
+    // }else if(idx === 5){
+    //   genre = 'G005';
+    // }else if(idx === 6){
+    //   genre = 'G006';
+    // }else if(idx === 7){
+    //   genre = 'G007';
+    // }else if(idx === 8){
+    //   genre = 'G008';
+    // }else if(idx === 9){
+    //   genre = 'G009';
+    // }else if(idx === 10){
+    //   genre = 'G010';
+    // }else if (idx === 11){
+    //   genre = 'G011';
+    // }else if (idx === 12){
+    //   genre = 'G012';
+    // }else if (idx === 13){
+    //   genre = 'G013';
+    // }else if (idx === 14){
+    //   genre = 'G014';
+    // }else if (idx === 15){
+    //   genre = 'G015';
+    // }else if (idx === 16){
+    //   genre = 'G016';
+    // }else if(idx === 17){
+    //   genre = 'G017';
+    // }
     // URL を設定
     let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + genre + '.json';
 
@@ -301,36 +306,36 @@ function showResult(resp) {
       }
     }
     for(let i=0;i<data.results.shop.length;i=i+1){
-      let divi = document.querySelector('div#info');  
+      let hako = document.querySelector('div#hako');  
       let h3 = document.createElement('h3')
       h3.textContent = ('店舗名:' + data.results.shop[i].name);
-      divi.insertAdjacentElement('beforeend', h3);
+      hako.insertAdjacentElement('beforeend', h3);
       let pyo = document.createElement('p');
       pyo.textContent = ('キャッチコピー:' + data.results.shop[i].catch);
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
       pyo = document.createElement('p');
       pyo.textContent = ('アクセス情報:' + data.results.shop[i].access);
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
       pyo = document.createElement('p');
       pyo.textContent = ('最寄駅:' + data.results.shop[i].station_name);
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
       pyo = document.createElement('p');
       pyo.textContent = ('住所:' + data.results.shop[i].address);
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
       pyo = document.createElement('p');
       pyo.textContent = ('予算:' + data.results.shop[i].budget.name);
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
       pyo = document.createElement('p');
       pyo.textContent = ('営業日時:' + data.results.shop[i].open);
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
     }
-    let divi = document.querySelector('div#research');  
+    let hako = document.querySelector('div#kensaku');  
     pyo = document.createElement('p');
       pyo.textContent = ('検索結果は以上です。再検索も可能です。');
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
       pyo = document.createElement('p');
       pyo.textContent = ('条件を変えれば、再検索が可能です。');
-      divi.insertAdjacentElement('beforeend', pyo);
+      hako.insertAdjacentElement('beforeend', pyo);
       let butt = document.querySelector('button#sendRequest');
       butt.textContent = '再検索する!'
     kaisu = kaisu+1;
