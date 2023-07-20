@@ -200,7 +200,7 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-console.log("アクセス:" + data.results.shop[0].access);
+/*console.log("アクセス:" + data.results.shop[0].access);
 console.log("住所:" + data.results.shop[0].address);
 console.log("予算:" + data.results.shop[0].name);
 console.log("キャッチコピー:" + data.results.shop[0].catch);
@@ -217,3 +217,46 @@ console.log("ジャンル:" + data.results.shop[1].genre.name);
 console.log("営業時間:" + data.results.shop[1].open);
 console.log("最寄駅:" + data.results.shop[1].station_name);
 console.log("サブジャンル:" + data.results.shop[1].sub_genre.name)
+*/
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
+
+
+// 通信を開始する処理
+function sendRequest() {
+    // URL を設定
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + genre + '.json';
+
+    // 通信開始
+    axios.get(url)
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
+}
+
+// 通信が成功した時の処理
+function showResult(resp) {
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+    // data をコンソールに出力
+    console.log(data);
+
+    // data.x を出力
+    console.log(data.x);
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+    console.log(err);
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+    console.log('Ajax 通信が終わりました');
+}
