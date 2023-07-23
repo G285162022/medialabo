@@ -14,12 +14,5 @@ h2{
     background: linear-gradient(to right, rgb(146, 238, 236), #335cd6);
 
 }
-div#zentai {
-    grid-template-columns: 1fr 1fr;
-display: grid;
-grid-auto-rows: 200px;
-grid-gap: 10px;
-flex-direction: row;
-width: 1024px;
-}
+
 
