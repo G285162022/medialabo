@@ -2,6 +2,7 @@ h1 {
     color: blue;
     text-align: center;
     text-shadow: rgb(182, 39, 134) 1px 0 10px;
+    background: linear-gradient(to right, rgb(146, 238, 183), #1e7d11);
 }
 body { 
     background-color: aquamarine;
