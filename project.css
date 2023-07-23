@@ -6,6 +6,7 @@ h1 {
 }
 h2 {
     color:darkblue;
+    text-shadow: rgb(180, 23, 128) 1px 0 10px;
 }
 input {
     text-align: center;
