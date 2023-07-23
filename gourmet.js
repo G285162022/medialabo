@@ -262,46 +262,53 @@ function showResult(resp) {
 
     // コンソールに出力
     if(kaisu !== 0){
-      let pyou = document.querySelectorAll('p');
+      let x = document.querySelectorAll('p');
       let h3 = document.querySelectorAll('h3');
       for(let h3r of h3){
         h3r.remove();
       }
-      for (let prem of pyou){
+      for (let prem of x){
         prem.remove();
       }
     }
     for(let i=0;i<data.results.shop.length;i=i+1){
       let hako = document.querySelector('div#hako');  
       let h3 = document.createElement('h3')
+
       h3.textContent = ('店舗名:' + data.results.shop[i].name);
       hako.insertAdjacentElement('beforeend', h3);
-      let pyo = document.createElement('p');
-      pyo.textContent = ('キャッチコピー:' + data.results.shop[i].catch);
-      hako.insertAdjacentElement('beforeend', pyo);
-      pyo = document.createElement('p');
-      pyo.textContent = ('アクセス情報:' + data.results.shop[i].access);
-      hako.insertAdjacentElement('beforeend', pyo);
-      pyo = document.createElement('p');
-      pyo.textContent = ('最寄駅:' + data.results.shop[i].station_name);
-      hako.insertAdjacentElement('beforeend', pyo);
-      pyo = document.createElement('p');
-      pyo.textContent = ('住所:' + data.results.shop[i].address);
-      hako.insertAdjacentElement('beforeend', pyo);
-      pyo = document.createElement('p');
-      pyo.textContent = ('予算:' + data.results.shop[i].budget.name);
-      hako.insertAdjacentElement('beforeend', pyo);
-      pyo = document.createElement('p');
-      pyo.textContent = ('営業日時:' + data.results.shop[i].open);
-      hako.insertAdjacentElement('beforeend', pyo);
+      let y = document.createElement('p');
+
+      y.textContent = ('キャッチコピー:' + data.results.shop[i].catch);
+      hako.insertAdjacentElement('beforeend', y);
+      y = document.createElement('p');
+
+      y.textContent = ('アクセス情報:' + data.results.shop[i].access);
+      hako.insertAdjacentElement('beforeend', y);
+      y = document.createElement('p');
+
+      y.textContent = ('最寄駅:' + data.results.shop[i].station_name);
+      hako.insertAdjacentElement('beforeend', y);
+      y = document.createElement('p');
+
+      y.textContent = ('住所:' + data.results.shop[i].address);
+      hako.insertAdjacentElement('beforeend', y);
+      y = document.createElement('p');
+
+      y.textContent = ('予算:' + data.results.shop[i].budget.name);
+      hako.insertAdjacentElement('beforeend', y);
+      y = document.createElement('p');
+
+      y.textContent = ('営業日時:' + data.results.shop[i].open);
+      hako.insertAdjacentElement('beforeend', y);
     }
     let hako = document.querySelector('div#kensaku');  
-    pyo = document.createElement('p');
-      pyo.textContent = ('検索結果は以上です。再検索も可能です。');
-      hako.insertAdjacentElement('beforeend', pyo);
-      pyo = document.createElement('p');
-      pyo.textContent = ('条件を変えれば、再検索が可能です。');
-      hako.insertAdjacentElement('beforeend', pyo);
+    y  = document.createElement('p');
+      y.textContent = ('検索結果は以上です。再検索も可能です。');
+      hako.insertAdjacentElement('beforeend', y);
+      y = document.createElement('p');
+      y.textContent = ('条件を変えれば、再検索が可能です。');
+      hako.insertAdjacentElement('beforeend', y);
       let butt = document.querySelector('button#sendRequest');
       butt.textContent = '再検索する!'
     kaisu = kaisu+1;
