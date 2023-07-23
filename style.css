@@ -14,17 +14,18 @@ h2{
     font-family: cursive;
     background: linear-gradient(to right, rgb(146, 238, 236), #335cd6);
 
-}.zentai {
-    display: grid;                      /* グリッドレイアウトにする*/
-    grid-template-columns: 1fr 2fr 2fr; /* 3列にする．幅は 1:2:2 の比率*/
-    grid-auto-rows: 100px 100px;        /* 高さは 100px */
-    grid-gap: 10px;                     /* 隣り合う行（列）の間隔を 10px に*/
-
-    width: 500px;
+}
+.zentai {
+    grid-template-columns: 1fr 1fr;
 }
 
 .box {
-    background: cyan;
+    background-color: rgba(255, 255, 255, 0.9);
+margin: 5px;
+padding: 5px 5px 5px 5px;
+border: solid 3px;
+border-color: gray;
+display: grid;
 }
 
 
