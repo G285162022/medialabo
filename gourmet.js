@@ -276,6 +276,7 @@ function showResult(resp) {
       let h3 = document.createElement('h3')
 
       h3.textContent = ('店舗名:' + data.results.shop[i].name);
+      <ul>
       hako.insertAdjacentElement('beforeend', h3);
       let y = document.createElement('p');
 
@@ -301,6 +302,7 @@ function showResult(resp) {
 
       y.textContent = ('営業日時:' + data.results.shop[i].open);
       hako.insertAdjacentElement('beforeend', y);
+      </ul>
     }
     let hako = document.querySelector('div#kensaku');  
     y  = document.createElement('p');
