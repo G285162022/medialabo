@@ -304,8 +304,8 @@ function showResult(resp) {
       hako.insertAdjacentElement('beforeend', y);
     }
     let hako = document.querySelector('div#kensaku');  
-    y  = document.createElement('p');
-      y.textContent = ('検索結果は以上です。再検索も可能です。');
+      y = document.createElement('p');
+      y.textContent = ('検索結果は以上です。');
       hako.insertAdjacentElement('beforeend', y);
       y = document.createElement('p');
       y.textContent = ('条件を変えれば、再検索が可能です。');
