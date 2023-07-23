@@ -12,6 +12,10 @@ h2{
     color:black;
     font-family: cursive;
     background: linear-gradient(to right, rgb(146, 238, 236), #335cd6);
-    padding: 5px;
+
+}
+div {
+    display: flex;
+    flex-direction: row;
 }
 
