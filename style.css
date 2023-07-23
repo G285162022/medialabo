@@ -4,6 +4,7 @@ p{
 h1{
     color: rgb(6, 67, 91);
     text-shadow: rgb(72, 210, 231)1px 0 10px;
+    text-align: center;
 }
 html{
     background-color: rgb(196, 238, 237);
