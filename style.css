@@ -14,7 +14,7 @@ h2{
     font-family: cursive;
     background: linear-gradient(to right, rgb(146, 238, 236), #335cd6);
 
-}div.zentai {
+}.zentai {
     display: grid;                      /* グリッドレイアウトにする*/
     grid-template-columns: 1fr 2fr 2fr; /* 3列にする．幅は 1:2:2 の比率*/
     grid-auto-rows: 100px 100px;        /* 高さは 100px */
@@ -23,7 +23,7 @@ h2{
     width: 500px;
 }
 
-div.box {
+.box {
     background: cyan;
 }
 
