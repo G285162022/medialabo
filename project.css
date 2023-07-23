@@ -1,7 +1,7 @@
 h1 {
     color: blue;
     text-align: center;
-    text-shadow: rgb(182, 39, 134);
+    text-shadow: rgb(182, 39, 134) 1px 0 10px;
 }
 body { 
     background-color: aquamarine;
@@ -18,7 +18,7 @@ button {
 h3 {
     color: red;
     text-align: center;
-    text-shadow: rgb(224, 224, 101);
+    text-shadow: rgb(224, 224, 101) 1px 0 10px;
 }
 div { 
     text-align: center;
