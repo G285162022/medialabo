@@ -14,11 +14,12 @@ h2{
     background: linear-gradient(to right, rgb(146, 238, 236), #335cd6);
 
 }
-div {
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    border: 1px solid gray;
-    padding: 5px 5px 5px 0;
+div#zentai {
+    grid-template-columns: 1fr 1fr;
+display: grid;
+grid-auto-rows: 200px;
+grid-gap: 10px;
+flex-direction: row;
+width: 1024px;
 }
 
