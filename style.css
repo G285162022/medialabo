@@ -22,11 +22,11 @@ h2{
 
 .box {
     background-color: rgba(63, 131, 204, 0.17);
-margin: 10px;
-padding: 5px 5px 5px 5px;
-border: solid 10px;
-border-color: rgb(90, 60, 209);
-display: grid;
+    margin: 10px;
+    padding: 5px 5px 5px 5px;
+    border: solid 10px;
+    border-color: rgb(90, 60, 209);
+    display: grid;
 }
 
 
