@@ -264,7 +264,7 @@ function showResult(resp) {
     if(kaisu !== 0){
       let x = document.querySelectorAll('p');
       let h3 = document.querySelectorAll('h3');
-      let t1 = document.querySelectorAll('t');
+      
       for(let m of h3){
         m.remove();
       }
@@ -275,7 +275,6 @@ function showResult(resp) {
     for(let i=0;i<data.results.shop.length;i=i+1){
       let hako = document.querySelector('div#hako');  
       let h3 = document.createElement('h3');
-      let t = document.createElement('t');
 
       h3.textContent = ('店舗名:' + data.results.shop[i].name);
 
@@ -305,9 +304,6 @@ function showResult(resp) {
       y.textContent = ('営業日時:' + data.results.shop[i].open);
       hako.insertAdjacentElement('beforeend', y);
 
-      t.setAttribute('href',data.results.shop[i].urls.pc);
-      t.textContent = ('詳しくはこちらで！');
-      hako.insertAdjacentElement('beforeend', t);
     }
     let hako = document.querySelector('div#kensaku');  
       y = document.createElement('p');
