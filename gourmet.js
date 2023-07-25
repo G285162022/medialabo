@@ -305,7 +305,7 @@ function showResult(resp) {
       y.textContent = ('営業日時:' + data.results.shop[i].open);
       hako.insertAdjacentElement('beforeend', y);
 
-      t.setAttribute('o',data.results.shop[i].urls.pc);
+      t.setAttribute('href',data.results.shop[i].urls.pc);
       t.textContent = ('詳しくはこちらで！');
       hako.insertAdjacentElement('beforeend', t);
     }
